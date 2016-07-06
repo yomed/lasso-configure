@@ -1,5 +1,5 @@
 {
-  "name": "configure-lasso",
+  "name": "lasso-configure",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yomed/configure-lasso.git"
+    "url": "git+https://github.com/yomed/lasso-configure.git"
   },
   "author": "Yoni Medoff",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yomed/configure-lasso/issues"
+    "url": "https://github.com/yomed/lasso-configure/issues"
   },
-  "homepage": "https://github.com/yomed/configure-lasso#readme",
+  "homepage": "https://github.com/yomed/lasso-configure#readme",
   "dependencies": {
     "lasso": "^2.5.5",
     "lasso-autoprefixer": "^2.0.0",

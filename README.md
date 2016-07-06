@@ -1,1 +1,1 @@
-# configure-lasso
+# lasso-configure
