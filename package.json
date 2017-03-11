@@ -1,7 +1,7 @@
 {
   "name": "@yomed/lasso-configure",
   "version": "1.0.1",
-  "description": "",
+  "description": "personal lasso configuration",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
     "url": "https://github.com/yomed/lasso-configure/issues"
   },
   "homepage": "https://github.com/yomed/lasso-configure#readme",
-  "dependencies": {
+  "peerDependencies": {
     "lasso": "^2.5.5",
     "lasso-autoprefixer": "^2.0.0",
     "lasso-clean-css": "^1.0.1",
