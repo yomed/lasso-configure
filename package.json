@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/yomed/lasso-configure#readme",
   "peerDependencies": {
-    "lasso": "^2.5.5",
+    "lasso": "^2.11.10",
     "lasso-autoprefixer": "^2.0.0",
-    "lasso-clean-css": "^1.0.1",
-    "lasso-less": "^2.3.1",
-    "lasso-marko": "^2.0.7"
+    "lasso-clean-css": "^2.0.0",
+    "lasso-less": "^2.4.3",
+    "lasso-marko": "^2.3.0"
   }
 }
