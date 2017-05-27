@@ -15,7 +15,7 @@ function run(hasJqueryBundle) {
                     'jquery/dist/jquery.min.js'
                 ]
             }
-        ]
+        ];
     };
 
     lasso.configure({

@@ -4,7 +4,8 @@
   "description": "personal lasso configuration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,9 @@
     "lasso-clean-css": "^2.0.0",
     "lasso-less": "^2.4.3",
     "lasso-marko": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-yomed": "^1.1.0"
   }
 }
