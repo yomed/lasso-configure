@@ -4,8 +4,9 @@ var lasso = require('lasso');
 
 var isProduction = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test';
 
-function run(hasJqueryBundle) {
+function run(hasJqueryBundle, useBabelTransform) {
     var bundles;
+    var transforms;
 
     if (hasJqueryBundle) {
         bundles = [
@@ -16,9 +17,23 @@ function run(hasJqueryBundle) {
                 ]
             }
         ];
-    };
+    }
+
+    if (useBabelTransform) {
+        transforms = {
+            transforms: [{
+                transform: 'lasso-babel-transform',
+                config: {
+                    extensions: [
+                        '.js'
+                    ]
+                }
+            }]
+        };
+    }
 
     lasso.configure({
+        require: transforms,
         plugins: [
             'lasso-marko',
             {
