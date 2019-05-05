@@ -1,32 +1,16 @@
-'use strict';
+const lasso = require('lasso');
 
-var lasso = require('lasso');
+const isProduction = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test';
 
-var isProduction = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test';
-
-function run(hasJqueryBundle, useBabelTransform) {
-    var bundles;
-    var transforms;
-
-    if (hasJqueryBundle) {
-        bundles = [
-            {
-                name: 'jquery',
-                dependencies: [
-                    'jquery/dist/jquery.min.js'
-                ]
-            }
-        ];
-    }
+function run(useBabelTransform, bundles) {
+    let transforms;
 
     if (useBabelTransform) {
         transforms = {
             transforms: [{
                 transform: 'lasso-babel-transform',
                 config: {
-                    extensions: [
-                        '.js'
-                    ]
+                    extensions: ['.js']
                 }
             }]
         };
@@ -54,17 +38,27 @@ function run(hasJqueryBundle, useBabelTransform) {
             {
                 plugin: 'lasso-autoprefixer',
                 config: {
-                    browsers: '> 1%'
+                    browsers: '> 0.25%'
                 }
             }
         ],
         outputDir: 'static',
         fingerprintsEnabled: isProduction,
         minify: isProduction,
-        resolveCssUrls: true,
         bundlingEnabled: isProduction,
-        bundles: bundles
+        bundles,
+        resolveCssUrls: true
     });
 }
 
+function createJqueryBundle() {
+    return {
+        name: 'jquery',
+        dependencies: [
+            'jquery/dist/jquery.min.js'
+        ]
+    };
+}
+
 module.exports = run;
+module.exports.createJqueryBundle = createJqueryBundle;
