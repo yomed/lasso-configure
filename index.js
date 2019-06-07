@@ -35,12 +35,7 @@ function run(useBabelTransform, bundles) {
                     enabled: isProduction
                 }
             },
-            {
-                plugin: 'lasso-autoprefixer',
-                config: {
-                    browsers: '> 0.25%'
-                }
-            }
+            'lasso-autoprefixer'
         ],
         outputDir: 'static',
         fingerprintsEnabled: isProduction,
