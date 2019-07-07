@@ -19,7 +19,7 @@
   "homepage": "https://github.com/yomed/lasso-configure#readme",
   "peerDependencies": {
     "lasso": "^2 || ^3",
-    "lasso-autoprefixer": "^2 || ^3",
+    "lasso-autoprefixer": "^2 || ^3 || ^4",
     "lasso-clean-css": "^2.0.0",
     "lasso-less": "^2 || ^3",
     "lasso-marko": "^2.3.0"
