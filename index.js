@@ -42,6 +42,7 @@ function run(useBabelTransform, bundles) {
         minify: isProduction,
         bundlingEnabled: isProduction,
         bundles,
+        bundleReadTimeout: 20000,
         resolveCssUrls: true
     });
 }
