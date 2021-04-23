@@ -1,6 +1,6 @@
 {
   "name": "@yomed/lasso-configure",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "personal lasso configuration",
   "main": "index.js",
   "scripts": {
